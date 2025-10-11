@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: "Wall    \u043A\u043E\u043F\u0438\u044F 4 copy 2_0"
   m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.Tilemaps.Tile
-  m_Sprite: {fileID: -6358995007402973305, guid: 824c9f1254f80254eb29f83503ca85bb, type: 3}
+  m_Sprite: {fileID: -6358995007402973305, guid: 0bb45903e1e4b0b44a8822f1a5e7e235, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

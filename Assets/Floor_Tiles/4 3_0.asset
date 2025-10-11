@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 4 3_0
   m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.Tilemaps.Tile
-  m_Sprite: {fileID: 3191368755569544091, guid: 124da6fb5bce3c942912ffd619d2b4cd, type: 3}
+  m_Sprite: {fileID: 3191368755569544091, guid: 0b86c389d7d5f8b44b69ffe229c2a840, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
