@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         rb.linearVelocity = new Vector2(moveVector.x, moveVector.y) * moveSpeed * Time.deltaTime;
+
         // transform.Translate(new Vector2(horizontalInput, verticalInput) * moveSpeed * Time.deltaTime);
 
     }
