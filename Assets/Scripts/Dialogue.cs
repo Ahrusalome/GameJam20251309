@@ -2,13 +2,14 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 using System;
+using UnityEngine.UI;
 
 // https://www.youtube.com/watch?v=8oTYabhj248
 public class Dialog : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
     public string[] lines;
-    public float textSpeed;
+    [SerializeField] float textSpeed;
 
     private int index;
 
@@ -16,15 +17,11 @@ public class Dialog : MonoBehaviour
     void Start()
     {
         textComponent.text = string.Empty;
-        StartLine();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ContinueDialog()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            if (textComponent.text == lines[index])
+        if (textComponent.text == lines[index])
             {
                 NextLine();
             } else
@@ -32,12 +29,13 @@ public class Dialog : MonoBehaviour
                 StopAllCoroutines();
                 textComponent.text = lines[index];
             }
-        }
     }
 
-    void StartLine()
+    public void StartLine()
     {
         index = 0;
+        gameObject.GetComponent<Image>().enabled = true;
+        Debug.Log("start liine");
         StartCoroutine(TypeLine());
     }
 

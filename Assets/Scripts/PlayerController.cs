@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     private Vector2 moveVector;
     private int collisionLayer;
     private GameObject collisionObject;
+    private bool inADialog;
+    private Dialog currentDialog;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -26,7 +28,6 @@ public class PlayerController : MonoBehaviour
     }
     public void OnInteract()
     {
-        Debug.Log("Interact");
         switch (collisionLayer)
         {
             case (int)Layer.Door:
@@ -36,6 +37,20 @@ public class PlayerController : MonoBehaviour
                 }
                 break;
             case (int)Layer.NPC:
+                    Debug.Log("Interact");
+                if (collisionObject.GetComponentInChildren<Dialog>() != null)
+                {
+                    currentDialog = collisionObject.GetComponentInChildren<Dialog>();
+                            Debug.Log("pas null");
+                    if (!inADialog)
+                    {
+                        currentDialog.StartLine();
+                        inADialog = true;
+                    }
+                        
+                    else
+                        currentDialog.ContinueDialog();
+                }
                 break;
             case (int)Layer.LookableObjects:
                 if (collisionObject.GetComponentInChildren<Lookable>() != null)
